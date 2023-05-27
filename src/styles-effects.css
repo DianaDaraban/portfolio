@@ -1,0 +1,118 @@
+.portfolio-parent:hover {
+  height: 56em;
+  /* transform: translateY(65%); */
+  transition: all 0.7s ease-in-out;
+}
+
+.portfolio-parent:hover > .portfolio-path {
+  clip-path: polygon(8% 0%, 92% 0%, 92% 78%, 32% 100%, 8% 80%);
+}
+
+.portfolio-parent:hover > .portfolio-path > p {
+  visibility: hidden;
+  font-size: 17rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.portfolio-parent:hover:has(~ .experiences-parent) {
+  transform: translateY(18%);
+  transition: all 0.7s ease-in-out;
+}
+
+.studies-parent:hover {
+  transform: translateY(18%);
+  transition: all 0.7s ease-in-out;
+}
+
+.studies-parent:hover p {
+  visibility: hidden;
+  font-size: 17rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.studies-parent:hover ~ .experience-parent {
+  transform: translateY(-19%);
+  transition: all 0.7s ease-in-out;
+}
+
+.studies-parent:hover ~ .experience-parent > .experience-path > p {
+  font-size: 14rem;
+  transition: all 0.4s ease-in-out;
+  bottom: 0;
+}
+/* .studies-parent:hover ~ .contact-parent {
+  height: 40em;
+} */
+/* .main-content .studies-parent:hover {
+  height: 250vh;
+} */
+
+.experience-parent:hover {
+  transform: translateY(24%);
+  transition: all 0.7s ease-in-out;
+  height: 70%;
+  top: -11em;
+}
+
+.experience-parent:hover > .experience-path > p {
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+.contact-parent:hover ~ .studies-parent {
+  transform: translateY(-19%);
+  transition: all 0.7s ease-in-out;
+}
+
+.contact-parent:hover {
+  height: 39em;
+  clip-path: polygon(0% 1%, 40% 52.5%, 100% 20%, 100% 100%, 0% 100%);
+  transition: all 0.4s ease-in-out;
+}
+
+.contact-parent:hover .contact-path > p {
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+}
+.contact-description-text {
+  visibility: hidden;
+}
+
+.contact-parent:hover .contact-info-text {
+  transition: all 2s ease-in-out;
+}
+
+.contact-parent:hover .contact-info-text .contact-description-text {
+  visibility: visible;
+}
+
+.main-container .contact-parent:hover {
+  height: 130vh;
+}
+
+/* SOCIAL ICONS HOVER */
+/* SOCIAL ICONS HOVER */
+/* SOCIAL ICONS HOVER */
+
+.social-icon::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.social-icon:hover::before {
+  box-shadow: 0 0 20px rgba(255, 240, 144, 0.7);
+}
+
+.social-icon:hover {
+  color: rgb(255, 213, 0);
+  box-shadow: 0 0 10px rgb(252, 181, 0);
+  background-color: rgba(240, 222, 181, 0.192);
+  border: 1px solid rgb(252, 181, 0);
+}
