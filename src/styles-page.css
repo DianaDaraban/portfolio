@@ -4,10 +4,17 @@
   box-sizing: border-box;
 }
 
+p {
+  padding: 0.1em;
+}
+
 :root {
   --NavFont: 'Big Shoulders Display', cursive;
   --AlternativeFont: 'Montserrat Alternates', sans-serif;
   --BebasFont: 'Bebas Neue', cursive;
+  --RalewayFont: 'Raleway', sans-serif;
+  --KanitFont: 'Kanit', sans-serif;
+  --NunitoFont: 'Nunito Sans', sans-serif;
   --AdventureGradient: linear-gradient(
     43deg,
     #1f796d 0%,
@@ -42,7 +49,7 @@
   width: 100vw;
   min-height: 122vh;
   height: max-content;
-  background-color: black;
+  background-color: rgb(31, 31, 31);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -84,10 +91,10 @@
 
 .about-path > p {
   font-family: var(--BebasFont);
-  font-size: 6rem;
+  font-size: 4.5rem;
   color: rgb(255, 255, 255);
   position: absolute;
-  left: 2em;
+  left: 2.4em;
   top: 0.1em;
   text-align: right;
   text-shadow: 5px 7px 10px hsla(0, 0%, 0%, 0.5);
@@ -151,9 +158,13 @@
   height: 100%;
   background-image: var(--AdventureGradient);
   clip-path: polygon(8% 0%, 92% 0%, 92% 90%, 68% 100%, 8% 66%);
+  position: relative;
   display: flex;
-  justify-content: end;
-  align-items: end;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+  padding: 10em 0 19em 0;
 }
 
 .experience-path > p {
@@ -191,7 +202,11 @@
   clip-path: polygon(8% 0%, 92% 0%, 92% 82.5%, 40% 100%, 8% 75.5%);
   position: relative;
   display: flex;
-  justify-content: right;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+  padding: 20em 0 7em 0;
 }
 
 .studies-path > p {
@@ -252,7 +267,7 @@
   left: 1em;
   z-index: 25;
   font-size: 1.7rem;
-  font-family: var(--AlternativeFont);
+  font-family: var(--KanitFont);
 }
 
 .experience-overlay {
@@ -299,7 +314,7 @@
   left: 0;
   z-index: 15;
   mix-blend-mode: normal;
-  opacity: 0.4;
+  opacity: 0.75;
 }
 
 /* SOCIAL ICON BTNS STYLING */
@@ -358,11 +373,256 @@
 .navigation li a {
   color: white;
   font-weight: 100;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   letter-spacing: 0.1rem;
   text-decoration: none;
   text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.418);
   /* border: 0.5px solid white; */
   padding: 0 1em 0 1em;
   white-space: nowrap;
+}
+
+/* DESCRIPTION COMPONENT */
+/* DESCRIPTION COMPONENT */
+/* DESCRIPTION COMPONENT */
+
+.description {
+  width: 59em;
+  z-index: 5;
+  position: absolute;
+  top: 5em;
+  left: 12em;
+  font-size: 1.1rem;
+  font-weight: 200;
+  text-align: justify;
+  font-family: var(--KanitFont);
+  color: antiquewhite;
+  text-indent: 1em;
+  line-height: 1.3em;
+}
+
+.description > p {
+  text-indent: 1em;
+}
+
+/* PORTFOLIO COMPONENT */
+/* PORTFOLIO COMPONENT */
+/* PORTFOLIO COMPONENT */
+
+.portfolio-text {
+  width: 59em;
+  z-index: 15;
+  position: absolute;
+  bottom: 5em;
+  left: 12em;
+  font-size: 2rem;
+  font-weight: 200;
+  text-align: justify;
+  font-family: var(--KanitFont);
+  color: antiquewhite;
+  text-indent: 1em;
+  line-height: 1.3em;
+}
+
+/* STUDIES COMPONENT */
+/* STUDIES COMPONENT */
+/* STUDIES COMPONENT */
+
+.experience-container {
+  width: 60%;
+  height: max-content;
+  z-index: 24;
+  /* position: absolute;
+  bottom: 5em;
+  left: 12em; */
+  font-size: 1.1rem;
+  font-weight: 200;
+  text-align: justify;
+  font-family: var(--KanitFont);
+  color: rgb(255, 255, 255);
+  /* text-indent: 1em; */
+  line-height: 1.2em;
+  display: grid;
+  grid-template-rows: 1fr 20px 3fr;
+  grid-template-columns: 1fr 20px 3fr;
+
+  gap: 0.3em;
+  grid-template-areas:
+    'start-date vertical-line job-title'
+    'horizontal-line circle end-horizontal-line'
+    'end-date second-vertical-line job-description';
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+.education-container {
+  width: 60%;
+  height: max-content;
+  z-index: 15;
+  /* position: absolute;
+  bottom: 5em;
+  left: 12em; */
+  font-size: 1.1rem;
+  font-weight: 200;
+  text-align: justify;
+  font-family: var(--KanitFont);
+  color: rgb(255, 255, 255);
+  /* text-indent: 1em; */
+  line-height: 1.2em;
+  display: grid;
+  grid-template-rows: 1fr 20px 3fr;
+  grid-template-columns: 1fr 20px 3fr;
+
+  gap: 0.3em;
+  grid-template-areas:
+    'start-date vertical-line job-title'
+    'horizontal-line circle end-horizontal-line'
+    'end-date second-vertical-line job-description';
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.start-date {
+  grid-area: start-date;
+  width: 100%;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: right;
+  padding: 0.6em;
+}
+
+.start-date > div {
+  height: max-content;
+  width: max-content;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.vertical-line > div {
+  grid-area: vertical-line;
+  background-color: rgb(255, 255, 255);
+  width: 2px;
+  height: 100%;
+}
+.job-title {
+  grid-area: job-title;
+  width: 100%;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: left;
+  padding: 0.6em;
+}
+
+.job-title > div {
+  height: max-content;
+  width: max-content;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.horizontal-line > div {
+  grid-area: horizontal-line;
+  background-color: rgb(255, 255, 255);
+  height: 2px;
+  width: 100%;
+}
+.circle,
+.horizontal-line,
+.vertical-line,
+.end-horizontal-line,
+.second-vertical-line {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.horizontal-line,
+.vertical-line,
+.end-horizontal-line,
+.second-vertical-line {
+  padding: 0.4em;
+}
+
+.circle > div {
+  grid-area: circle;
+  background-color: rgb(255, 255, 255);
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+}
+.end-horizontal-line > div {
+  grid-area: end-horizontal-line;
+  background-color: rgb(255, 255, 255);
+  height: 2px;
+  width: 100%;
+}
+.end-date {
+  grid-area: end-date;
+  width: 100%;
+  height: 100%;
+  align-items: start;
+  justify-content: right;
+  padding: 0.6em;
+}
+
+.end-date > div {
+  height: max-content;
+  width: max-content;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.second-vertical-line > div {
+  grid-area: second-vertical-line;
+  background-color: rgb(255, 255, 255);
+  width: 2px;
+  height: 100%;
+}
+.job-description {
+  max-width: 60em;
+  height: 100%;
+  grid-area: job-description;
+  flex-direction: column;
+  gap: 0.7em;
+  padding: 1em;
+  justify-content: center;
+  align-items: start;
+}
+
+.job-description > h3 {
+  font-weight: 400;
+}
+
+.end-date,
+.job-description,
+.job-title,
+.start-date {
+  display: flex;
+}
+
+.job-description > ul {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.job-description > ul > li {
+  width: 46em;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 0.5em;
+}
+
+.check {
+  margin-top: 0.2em;
+}
+
+.job-description > ul > li > p {
+  width: 95%;
 }

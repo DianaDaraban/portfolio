@@ -8,7 +8,7 @@
   clip-path: polygon(8% 0%, 92% 0%, 92% 78%, 32% 100%, 8% 80%);
 }
 
-.portfolio-parent:hover > .portfolio-path > p {
+.portfolio-parent:hover #portfolio {
   visibility: hidden;
   font-size: 17rem;
   transition: all 0.4s ease-in-out;
@@ -20,11 +20,21 @@
 }
 
 .studies-parent:hover {
-  transform: translateY(18%);
+  height: max-content;
+  transform: translateY(30%);
   transition: all 0.7s ease-in-out;
 }
 
-.studies-parent:hover p {
+.studies-parent:hover .education-container {
+  opacity: 1;
+  transition: all 2.2s ease-in-out;
+}
+.experience-parent:hover .experience-container {
+  opacity: 1;
+  transition: all 2.2s ease-in-out;
+}
+
+.studies-parent:hover #studies {
   visibility: hidden;
   font-size: 17rem;
   transition: all 0.4s ease-in-out;
@@ -35,7 +45,7 @@
   transition: all 0.7s ease-in-out;
 }
 
-.studies-parent:hover ~ .experience-parent > .experience-path > p {
+.studies-parent:hover ~ .experience-parent > .experience-path > #experience {
   font-size: 14rem;
   transition: all 0.4s ease-in-out;
   bottom: 0;
@@ -48,13 +58,13 @@
 } */
 
 .experience-parent:hover {
-  transform: translateY(24%);
+  transform: translateY(34%);
   transition: all 0.7s ease-in-out;
-  height: 70%;
-  top: -11em;
+  height: max-content;
+  top: -4em;
 }
 
-.experience-parent:hover > .experience-path > p {
+.experience-parent:hover > .experience-path > #experience {
   visibility: hidden;
   transition: all 0.4s ease-in-out;
 }
@@ -70,7 +80,7 @@
   transition: all 0.4s ease-in-out;
 }
 
-.contact-parent:hover .contact-path > p {
+.contact-parent:hover .contact-path > #contact {
   visibility: hidden;
   transition: all 0.4s ease-in-out;
 }

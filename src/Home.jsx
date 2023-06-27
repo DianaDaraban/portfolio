@@ -1,16 +1,27 @@
-import React from 'react'
+import { React, useState } from 'react'
 import './styles-page.css'
 import './styles-effects.css'
 import SocialIcons from './components/SocialIcons'
 import me from './img/me.png'
+import interview from './img/interview.mp4'
+
+import Description from './components/Description'
+import PortfolioText from './components/PortfolioText'
+import Education from './components/Education'
+import Experience from './components/Experience'
 
 export default function Home() {
+  const [portfolioHeight, setPortfolioHeight] = useState('')
+
+  const portfolioHover = (height) => {
+    style = { height: setPortfolioHeight(height) }
+  }
   return (
     <>
       <div className="main-content">
         <span className="contact-parent">
           <div className="contact-path">
-            {/* <video src={wine} autoPlay loop muted></video> */}
+            <video src={interview} autoPlay loop muted></video>
             <div className="contact-overlay"></div>
             <p id="contact">Contact</p>
           </div>
@@ -26,7 +37,8 @@ export default function Home() {
         <span className="studies-parent">
           <div className="studies-path">
             <div className="studies-overlay"></div>
-            {/* <video src={yoga} autoPlay loop muted></video> */}
+            <Education />
+            {/* <video src={interview} autoPlay loop muted></video> */}
             <p id="studies">My education</p>
           </div>
         </span>
@@ -34,18 +46,21 @@ export default function Home() {
         <span className="experience-parent">
           <div className="experience-path">
             {/* <video src={jump} autoPlay loop muted></video> */}
+            <Experience />
             <div className="experience-overlay"></div>
             <p id="experience">Work Experience</p>
           </div>
         </span>
-        <span className="portfolio-parent">
+        <span className="portfolio-parent" style={{ height: portfolioHeight }}>
           <div className="portfolio-path">
+            <PortfolioText portfolioHover={portfolioHover} />
             {/* <video src={jump} autoPlay loop muted></video> */}
             <div className="portfolio-overlay"></div>
             <p id="portfolio">Portfolio</p>
           </div>
         </span>
         <span className="about-parent">
+          <Description />
           <div className="about-path">
             {/* <video src={jump} autoPlay loop muted></video> */}
             <img src={me} alt="me" className="img-me" />

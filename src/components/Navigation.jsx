@@ -1,13 +1,18 @@
+import { useState } from 'react'
 import React from 'react'
 
 import { HashLink as Link } from 'react-router-hash-link'
 
-export default function Navigation() {
+export default function Navigation({ portfolioHover }) {
   return (
     <div className="navigation-container">
       <ul className="navigation">
         <li>
-          <Link smooth to="./#portfolio">
+          <Link
+            smooth
+            to="./#portfolio"
+            onClick={() => portfolioHover('56rem')}
+          >
             Portfolio
           </Link>
         </li>
