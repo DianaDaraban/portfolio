@@ -1,38 +1,38 @@
-.portfolio-parent:hover {
+/* .portfolio-parent:hover {
   height: 56em;
-  /* transform: translateY(65%); */
+  transform: translateY(65%);
   transition: all 0.7s ease-in-out;
-}
+} */
 
-.portfolio-parent:hover > .portfolio-path {
+/* .portfolio-parent:hover > .portfolio-path {
   clip-path: polygon(8% 0%, 92% 0%, 92% 78%, 32% 100%, 8% 80%);
-}
+} */
 
-.portfolio-parent:hover #portfolio {
+/* .portfolio-parent:hover #portfolio {
   visibility: hidden;
   font-size: 17rem;
   transition: all 0.4s ease-in-out;
-}
+} */
 
-.portfolio-parent:hover:has(~ .experiences-parent) {
+/* .portfolio-parent:hover:has(~ .experiences-parent) {
   transform: translateY(18%);
   transition: all 0.7s ease-in-out;
-}
+} */
 
-.studies-parent:hover {
+/* .studies-parent:hover {
   height: max-content;
   transform: translateY(30%);
   transition: all 0.7s ease-in-out;
-}
+} */
 
 .studies-parent:hover .education-container {
   opacity: 1;
   transition: all 2.2s ease-in-out;
 }
-.experience-parent:hover .experience-container {
+/* .experience-parent:hover .experience-container {
   opacity: 1;
   transition: all 2.2s ease-in-out;
-}
+} */
 
 .studies-parent:hover #studies {
   visibility: hidden;
@@ -57,7 +57,7 @@
   height: 250vh;
 } */
 
-.experience-parent:hover {
+/* .experience-parent:hover {
   transform: translateY(34%);
   transition: all 0.7s ease-in-out;
   height: max-content;
@@ -67,7 +67,7 @@
 .experience-parent:hover > .experience-path > #experience {
   visibility: hidden;
   transition: all 0.4s ease-in-out;
-}
+} */
 
 .contact-parent:hover ~ .studies-parent {
   transform: translateY(-19%);

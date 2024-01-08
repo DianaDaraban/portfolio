@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caramel&family=Corinthia&family=Great+Vibes&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +14,9 @@ p {
   --NavFont: 'Big Shoulders Display', cursive;
   --AlternativeFont: 'Montserrat Alternates', sans-serif;
   --BebasFont: 'Bebas Neue', cursive;
+  --CaramelFont: 'Caramel', cursive;
+  --CorinthiaFont: 'Corinthia', cursive;
+  --GreatVibesFont: 'Great Vibes', cursive;
   --RalewayFont: 'Raleway', sans-serif;
   --KanitFont: 'Kanit', sans-serif;
   --NunitoFont: 'Nunito Sans', sans-serif;
@@ -90,16 +95,18 @@ p {
 }
 
 .about-path > p {
-  font-family: var(--BebasFont);
-  font-size: 4.5rem;
+  font-family: var(--CaramelFont);
+  font-size: 6rem;
   color: rgb(255, 255, 255);
   position: absolute;
-  left: 2.4em;
-  top: 0.1em;
+  left: 2em;
+  top: 0;
   text-align: right;
   text-shadow: 5px 7px 10px hsla(0, 0%, 0%, 0.5);
   overflow: hidden;
   z-index: 21;
+  padding: 0 1em 0 0;
+  line-height: 6rem;
 }
 
 /* PORTFOLIO ELEMENT */
@@ -122,7 +129,7 @@ p {
   background-image: var(--AdventureGradient);
   clip-path: polygon(8% 0%, 92% 0%, 92% 78%, 32% 100%, 8% 82.5%);
   display: flex;
-  justify-content: end;
+  justify-content: start;
   align-items: end;
 }
 
@@ -625,4 +632,20 @@ p {
 
 .job-description > ul > li > p {
   width: 95%;
+}
+
+/* PORFOLIO CLICK  BUTTON */
+/* PORFOLIO CLICK  BUTTON */
+/* PORFOLIO CLICK  BUTTON */
+/* PORFOLIO CLICK  BUTTON */
+
+.click-portfolio {
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
+  margin-bottom: 0.2em;
+  margin-left: 14.9em;
+  z-index: 60;
+  font-size: 2em;
+  color: white;
 }

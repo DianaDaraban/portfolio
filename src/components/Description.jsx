@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Description() {
+export default function Description({ descriptionLetters }) {
   return (
     <div>
       <p className="description">
